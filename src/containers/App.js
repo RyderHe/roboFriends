@@ -3,6 +3,7 @@ import CardList from '../components/CardList.js';
 // import { robots } from './robots';
 import SearchBox from '../components/SearchBox.js';
 import Scroll from '../components/Scroll';
+import ErrorBoundary from '../components/ErrorBoundary.js';
 import './App.css';
 
 class App extends Component{
@@ -51,7 +52,9 @@ class App extends Component{
                     <Scroll> 
                         {/* every compnent has props though Scroll did not has it as parameter */}
                         {/* children */}
-                        <CardList robots={ filterRobots }/> 
+                        <ErrorBoundary>
+                            <CardList robots={ filterRobots }/> 
+                        </ErrorBoundary>
                     </Scroll>
                 </div>    
             );
