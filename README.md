@@ -1,8 +1,8 @@
 # roboFriends
 
-https://ryderhe.github.io/roboFriends/
-
 Zero To Mastery React Project: find your robot friends here
+
+Demo: https://ryderhe.github.io/roboFriends/
 
 - To compile：
 
