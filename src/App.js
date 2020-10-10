@@ -8,14 +8,20 @@ class App extends Component{
     constructor() {
         super()
         this.state = {
-            robots: robots,
+            robots: [],
             searchfield: ''
         }
+        console.log("mounting - constructor");
+    }
+
+    componentDidMount(){
+        console.log('mounting - componentDidMount');
+        this.setState({robots: robots});
     }
 
     onSearchChange=(event) => {
         // console.log(event.target.value);
-        this.setState({searchfield: event.target.value});
+        this.setState({searchfield: event.target.value}); // every time the state get updated, it goes to updating cycle
     }
 
     render() {
@@ -24,7 +30,7 @@ class App extends Component{
             return robots.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
         })
         // console.log(filterRobots);
-
+        console.log('mounting - render');
         return (
             <div className='tc'> 
                 <h1 className='f1'> Robot Friends </h1>
